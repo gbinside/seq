@@ -1,0 +1,30 @@
+#user_agent
+visits
+#consumer
+requests request_token
+<pre>HTTP POST\n
+oauth_consumer_key:\n
+oauth_signature_method:\n
+oauth_signature:\n
+oauth_timestamp:\n
+oauth_nonce:\n
+oauth_version:</pre>
+#service_provider
+
+#service_provider grants request_token to #consumer
+
+#consumer 302 Temporary Redirect<br/>Location:
+service_provider/something-something #user_agent
+
+#user_agent visits and grants authorization to #service_provider
+
+#service_provider 302 Temporary Redirect<br/>Location:
+consumer/something-something #user_agent
+
+#user_agent is redirected to with request_token #consumer
+
+#consumer requests access_token to #service_provider
+
+#service_provider grants access_token to #consumer
+
+#consumer presents signed resource requests to #service_provider
