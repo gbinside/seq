@@ -9,8 +9,7 @@ $graph=new SeqDiag();
 $graph->parse($data);
 file_put_contents('tempfile.dot',$graph->render());
 
-shell_exec('dot -Tpng -otempfile.png tempfile.dot');
-shell_exec('explorer tempfile.png');
+shell_exec('dot -Tps -O tempfile.dot');
 
 class Edge
 {
